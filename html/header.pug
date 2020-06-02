@@ -1,0 +1,10 @@
+header.header
+  a.header__logo(href='#') Gymso Fitness
+  input#header__menu--btn.header__menu--btn(type='checkbox')
+  label.header__menu--icon(for='header__menu--btn')
+    span.header__menu--navicon
+  ul.header__menu
+    - let items = ['home', 'about us', 'classes', 'schedules', 'contact']
+    each item in items
+      li
+        a(href="#")=item

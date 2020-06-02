@@ -1,0 +1,27 @@
+footer
+  .footer__left
+    h2 Gymso Fitness
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    a(href="#") <i class="fas fa-map-marker"></i>veniam, quis nostrud exercitation ullamco</i>
+    a(href="#") <i class="far fa-envelope"></i>lequangdongg@gmail.com
+    a(href="#") <i class="fas fa-phone-volume"></i>0905765653
+  .footer__center
+    h2 Recent Posts
+    - let footerImages = ['/images/5.jpg', '/images/6.jpg']
+    each footerImage in footerImages
+      .footer__center--image
+        img(src=footerImage)
+        .footer__center--text
+          p Excepteur sint occaecat
+          small 18.05.2020 by Dong Le
+  .footer__right
+    h2 Newletters
+    div
+      input(type="text" placeholder="Please Enter Email")
+      button SUBSCRIBE
+    .footer__right--icon
+      a <i class="fab fa-facebook"></i>
+      a <i class="fab fa-twitter"></i>
+      a <i class="fab fa-linkedin"></i>
+      a <i class="fab fa-instagram"></i>
+      a <i class="fab fa-google-plus-square"></i>

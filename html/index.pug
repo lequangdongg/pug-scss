@@ -1,0 +1,111 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/styles.css")
+    title Pug + SCSS
+  body
+    include header
+    
+    main.container
+      section.banner
+        .banner__container
+          h6.banner__container--description new way to build a healthy lifestyle!
+          h1.banner__container--title UPGRADE YOUR BODY AT GYMSO FITNESS
+          a(href="#") GET STARTED
+          a(href="#") LEARN MORE
+
+      section.member
+        .member__container
+          .member__container--left
+            h2 New to the gymso?
+            h6 Your membership is up to 2 months FREE ($62.50 per month)
+            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            a(href="#") become a member today
+          .member__container--right
+            h2 Working hours
+            strong Sunday : Closed
+            strong Monday - Friday
+            p 7:00 AM - 10:00 PM
+            strong Saturday
+            p 6:00 AM - 4:00 PM
+
+      section.about
+        .about__container
+          .about__container--content
+            .about__container--text
+              h2 Hello, we are Gymso
+              p.about__container--desciption You are NOT allowed to redistribute this HTML template downloadable ZIP file on any template collection site. You are allowed to use this template for your personal or business websites.
+              p.about__container--bold If you have any question regarding
+                a(href="#")   Gymso Fitness HTML, you can contact Tooplate, thank you.
+          - let images = ['/images/4.jpg', '/images/5.jpg']
+          each image in images
+            .about__container--image
+              img(src=image)
+              .about__container--footer
+                div
+                  h3 Maria Kita
+                  span Yoga Instructor
+                ul
+                  - let listIcons = ['fab fa-twitter', 'fab fa-instagram']
+                  each listIcon in listIcons
+                    li
+                      a(href="#" class=listIcon)
+
+      section.discount
+        .discount__container
+          .discount__container--title
+            h6 Get A Perfect Body
+            h2 Our Training Classes
+          .discount__container--card
+            - let imageContainers = ['/images/2.jpg', '/images/3.jpg', '/images/6.jpg']
+            each imageContainer in imageContainers
+              .discount__container--items
+                img(src=imageContainer)
+                .discount__container--info
+                  h3 Yoga
+                  span <strong>Trained by </strong> - Bella
+                  span.discount__container--money $50
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing
+
+      section.schedule
+        .schedule__container
+          .schedule__container--title
+            h6 our weekly GYM schedules
+            h2 Workout Timetable
+          .schedule__container--table
+            table
+              thead
+                tr
+                  th <i class="far fa-calendar-alt"></i>
+                  - let list = ["mon", "tue", "wed","thu", "fri", "sat"]
+                  each items in list 
+                    th= items
+              tbody
+                - for(let x = 0 ; x < 8; x++)
+                  tr
+                    td.schedule__container--calendar
+                      small 7:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+                    td
+                      strong Cardio
+                      span 7:00am - 9:00 am
+      include footer
+          
+  script(src="/font-awesome/all.js")
