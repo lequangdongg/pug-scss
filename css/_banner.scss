@@ -1,0 +1,81 @@
+.banner {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/images/1.jpg");
+  background-size: cover;
+  animation: banner 5s infinite;
+  @keyframes banner{
+    0% {
+      background-image: url("/images/1.jpg");
+    }
+    40%{
+      background-image: url("/images/6.jpg");
+    }
+    80% {
+      background-image: url("/images/3.jpg");
+    }
+    
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: $colorWhite;
+    text-align: center;
+    &--description {
+      color: $colorGray;
+      font-size: $fontSize22;
+      font-weight: 200;
+      text-align: center;
+    }
+    &--title {
+      font-size: $fontSize48;
+      font-weight: 600;
+      margin-top: $padding20;
+      text-align: center;
+      @media screen and (max-width: 1024px) {
+        font-size: 32px;
+      }
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 2px;
+      color: $colorWhite;
+      font-size: $fontSize14;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      text-align: center;
+      margin-top: $padding20;
+    }
+    a:hover:nth-child(3) {
+      color: $colorRed;
+      transition: 0.5s;
+    }
+    a:nth-child(4) {
+      color: $colorRed;
+      border: 1px solid $colorRed;
+    }
+    a:hover:nth-child(4) {
+      border: 1px solid $colorWhite;
+      background-color: $colorWhite;
+      transition: 0.5s;
+    }
+    @media screen and (max-width: 605px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 375px) {
+      top: 60%;
+    }
+  }
+}

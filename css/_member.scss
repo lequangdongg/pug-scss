@@ -1,0 +1,128 @@
+.member {
+  background-color: $backgroundColor;
+  padding: 60px 0;
+  position: relative;
+  color: $colorWhite;
+  &__container {
+    display: grid;
+    grid-template-columns: $templateGrid;
+    &--left {
+      justify-self: end;
+      padding-right: 18px;
+      h2 {
+        font-size: $fontSize36;
+        font-weight: bold;
+        letter-spacing: -2px;
+        margin-bottom: $fontSize14;
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+        @media screen and (max-width: 605px) {
+          font-size: 24px;
+        }
+      }
+      h6 {
+        margin-bottom: 21px;
+        font-size: $fontSize22;
+        font-weight: $fontWeight;
+        text-align: left;
+        width: $width70;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 605px) {
+          font-size: 16px;
+          width: 100%;
+        }
+      }
+      p {
+        color: $colorGray1;
+        font-size: $fontSize18;
+        font-weight: $fontWeight;
+        width: $width70;
+        line-height: $padding20;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 605px) {
+          font-size: 18px;
+          width: 100%;
+        }
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $colorWhite;
+        background-color: $colorRed;
+        padding: 14px 48px;
+        font-size: $fontSize14;
+        letter-spacing: 0.5px;
+        margin: 20px 20px 20px 0;
+        white-space: nowrap;
+        font-weight: bold;
+        &:hover {
+          border: 1px solid $colorWhite;
+          background-color: $colorWhite;
+          color: $colorRed;
+          transition: 0.5s;
+        }
+        @media screen and (max-width: 768px){
+          padding: 14px;
+        }
+        @media screen and (max-width: 605px) {
+          padding: 8px;
+        }
+        @media screen and (max-width: 425px) {
+          padding: $fontSize14;
+          text-align: center;
+          width: 93%;
+        }
+      }
+      @media screen and (max-width: 1024px){
+        margin-left: $fontSize28;
+      }
+      @media screen and (max-width: 605px) {
+        margin-right: 0;
+      }
+    }
+    &--right {
+      border-left: 1px solid $colorGray2;
+      text-align: center;
+      h2 {
+        font-size: $fontSize36;
+        font-weight: bold;
+        letter-spacing: -2px;
+        margin-bottom: $fontSize14;
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+        @media screen and (max-width: 605px) {
+          font-size: 24px;
+        }
+      }
+      strong {
+        display: block;
+        font-weight: bold;
+        margin-top: $padding20;
+      }
+      p {
+        color: $colorGray1;
+        font-size: $fontSize18;
+        font-weight: $fontWeight;
+        line-height: 30px;
+        @media screen and (max-width: 605px) {
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        margin-top: 20px;
+      }
+    }
+    @media screen and (max-width: 425px) {
+      display: grid;
+      grid-template-rows: $templateGrid;
+      grid-template-columns: none;
+    }
+  }
+}

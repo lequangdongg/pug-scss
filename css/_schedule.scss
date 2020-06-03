@@ -1,0 +1,65 @@
+.schedule {
+  background: #171819;
+  padding: 100px 0;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  &__container {
+    &--title {
+      text-align: center;
+      h6 {
+        color: $colorGray;
+        font-size: $fontSize22;
+        font-weight: 100;
+      }
+      h2 {
+        font-size: $fontSize36;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+      }
+    }
+    &--table {
+      padding-top: 30px;
+      table {
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        width: 80%;
+        display: table;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: uppercase;
+        thead {
+          background-color: $colorRed;
+          tr {
+            height: 68px;
+            border: 1px solid $backgroundColor;
+            th {
+              border: 1px solid $backgroundColor;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              border: 1px solid $colorGray2;
+              padding: 20px;
+              strong {
+                display: block;
+              }
+              small {
+                font-size: $fontSize14;
+              }
+            }
+            .schedule__container--calendar {
+              background: $colorRed;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 768px){
+        overflow-y: scroll;
+      }
+    }
+  }
+}

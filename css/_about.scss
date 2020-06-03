@@ -1,0 +1,104 @@
+.about {
+  background: #ececec;
+  padding: 70px 0;
+  display: block;
+  height: auto;
+  &__container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    &--content {
+      width: 50%;
+      .about__container--text {
+        width: 100%;
+        h2 {
+          font-size: $fontSize36;
+          font-weight: bold;
+          letter-spacing: -2px;
+          margin-bottom: $fontSize14;
+          @media screen and (max-width: 768px){
+            font-size: $fontSize28;
+          }
+        }
+        .about__container--desciption {
+          color: $colorGray1;
+          font-size: $fontSize18;
+          font-weight: $fontWeight;
+          line-height: 28px;
+          @media screen and (max-width: 768px){
+            font-size: $fontSize14;
+          }
+        }
+        .about__container--bold {
+          margin-top: 30px;
+          line-height: $fontSize28;
+          a {
+            text-decoration: none;
+            color: $colorRed;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          @media screen and (max-width: 768px){
+            font-size: $fontSize14;
+          }
+        }
+      }
+    }
+    &--image {
+      position: relative;
+      max-width: 250px;
+      background: $colorWhite;
+      box-shadow: 6px 0 38px rgba(20, 20, 20, 0.2);
+      img {
+        max-width: 100%;
+        height: auto;
+        border-style: none;
+      }
+      .about__container--footer {
+        display: flex;
+        justify-content: space-evenly;
+        padding: $padding20;
+        h3 {
+          font-size: $fontSize28;
+          font-weight: bold;
+          letter-spacing: -1px;
+        }
+        span {
+          font-weight: $fontWeight;
+          opacity: 0.5;
+        }
+        li {
+          list-style: none;
+          text-decoration: none;
+          display: block;
+          color: $colorGray1;
+          font-size: $fontSize18;
+          font-weight: bold;
+          margin: 5px 10px;
+          text-align: center;
+          &:hover {
+            color: $colorRed;
+            cursor: pointer;
+            transition: 0.5s;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          padding: 0;
+        }
+      }
+      @media screen and (max-width: 1024px){
+        margin: 0 14px;
+      }
+      @media screen and (max-width: 605px) {
+        margin-top: 14px;
+      }
+    }
+    @media screen and (max-width: 605px) {
+      flex-direction: column;
+    }
+  }
+}

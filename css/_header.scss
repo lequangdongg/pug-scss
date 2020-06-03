@@ -23,7 +23,7 @@
 			}
 		}
 	}
-	.header__menu--btn {
+	&__menu--btn {
 		&:hover {
 			background-color: #f4f4f4;
 		}
@@ -57,7 +57,7 @@
 			}
 		}
 	}
-	.header__logo {
+	&__logo {
 		display: block;
 		float: left;
 		font-size: $fontSize28;
@@ -65,11 +65,11 @@
     text-decoration: none;
     color: $colorWhite;
 	}
-	.header__menu {
+	&__menu {
 		clear: both;
 		max-height: 0;
 	}
-	.header__menu--icon {
+	&__menu--icon {
 		cursor: pointer;
 		float: right;
 		padding: 28px 20px;
